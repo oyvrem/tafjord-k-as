@@ -1,0 +1,16 @@
+.card-image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    img {
+        width: 100%;
+    }
+}
+
+.responsive-icon {
+    height: 1em;
+    width: 1em;
+    margin-bottom: 5px;
+}
