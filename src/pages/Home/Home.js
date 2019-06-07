@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../../components/Navigation/Nagivation';
 import Footer from '../../components/Footer/Footer';
 import Ansatt from '../../components/Ansatte/Ansatt';
-import Kontaktpunkt from '../../components/Kontaktpunkt/Kontaktpunkt';
+import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 
 class Home extends React.Component {
 
@@ -66,13 +66,9 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <section className="container-fluid bg-primary pt-5">
-                    <div className="container">
-                        <div className="align-items-center d-flex row">
-                        {/* THIS IS FOR THE CERTIFICATIONS */}
-                        </div>
-                    </div>
-                </section>
+                <Sertifikasjoner
+                    sertifikasjoner={this.state.sertifikasjoner}
+                />
                 <Footer
                     kontaktpunkter={this.state.kontaktpunkt}
                 />
