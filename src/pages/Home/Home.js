@@ -55,11 +55,11 @@ class Home extends React.Component {
                         <p className="lead mb-4">{this.state.forside.forside_header_tekst}</p>
                         <p>
                         <a href="#" className="btn btn-lg btn-light mb-3 mr-3">Se hva vi gjør</a>
-                        <button onClick={this.goToAnsatte} className="btn btn-lg btn-outline-light mb-3">Prat med en av oss</button>
+                        <a href="#ansatte" class="btn btn-lg btn-outline-light mb-3">Prat med en av oss</a>
                         </p>
                     </div>      
                 </header>
-                <section ref={this.ansatteSeksjon} className="container-fluid pt-5 pb-5">
+                <section id="ansatte" className="container-fluid pt-5 pb-5">
                     <div className="container">
                         <h2 className="text-center mb-4">Prat med en av oss</h2>
                         <div className="row">
