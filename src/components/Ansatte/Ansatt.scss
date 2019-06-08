@@ -1,16 +1,26 @@
-.card-image {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    max-width: 100%;
-    height: auto;
-    img {
-        width: 100%;
-    }
-}
+@import '~bootstrap/scss/bootstrap';
 
-.responsive-icon {
-    height: 1em;
-    width: 1em;
-    margin-bottom: 5px;
+.employee-card {
+    @extend .card;
+    &__image {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+        }
+    }
+    &__body {
+        @extend .card-body;
+        &__text {
+            @extend .lead;
+            &__icon {
+                height: 1em;
+                width: 1em;
+                margin-bottom: 5px;
+            }
+        }
+    }
 }
