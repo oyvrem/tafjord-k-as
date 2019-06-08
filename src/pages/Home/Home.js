@@ -12,25 +12,19 @@ class Home extends React.Component {
         super(props);
         this.state = {
             forside: [],
-            ansatte: [],
-            sertifikasjoner: [],
-            kontaktpunkt: []
+            ansatte: []
         }
     }
 
     componentWillMount() {
         Promise.all([
             fetch('https://naits.no/wp-json/acf/v3/options/forsideinnstillinger'),
-            fetch('https://naits.no/wp-json/wp/v2/ansatte'),
-            fetch('https://naits.no/wp-json/acf/v3/options/sertifikasjoner'),
-            fetch('https://naits.no/wp-json/acf/v3/options/kontaktpunkt')
+            fetch('https://naits.no/wp-json/wp/v2/ansatte')
         ])
-        .then(([res1, res2, res3, res4]) => Promise.all([res1.json(), res2.json(), res3.json(), res4.json()]))
-        .then(([data1, data2, data3, data4]) => this.setState({
+        .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+        .then(([data1, data2]) => this.setState({
             forside: data1.acf,
-            ansatte: data2,
-            sertifikasjoner: data3.acf.sertifikasjon,
-            kontaktpunkt: data4.acf.kontaktpunkt
+            ansatte: data2
         }));
     }
 
@@ -55,7 +49,7 @@ class Home extends React.Component {
                         <p className="lead mb-4">{this.state.forside.forside_header_tekst}</p>
                         <p>
                         <a href="#" className="btn btn-lg btn-light mb-3 mr-3">Se hva vi gjør</a>
-                        <a href="#ansatte" class="btn btn-lg btn-outline-light mb-3">Prat med en av oss</a>
+                        <a href="#ansatte" className="btn btn-lg btn-outline-light mb-3">Prat med en av oss</a>
                         </p>
                     </div>      
                 </header>
@@ -79,12 +73,8 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <Sertifikasjoner
-                    sertifikasjoner={this.state.sertifikasjoner}
-                />
-                <Footer
-                    kontaktpunkter={this.state.kontaktpunkt}
-                />
+                <Sertifikasjoner />
+                <Footer />
             </React.Fragment>
         )
     }

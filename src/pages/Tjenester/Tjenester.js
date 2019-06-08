@@ -1,9 +1,11 @@
 import React from 'react';
 import Navigation from '../../components/Navigation/Nagivation';
+import Sertfifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import Footer from '../../components/Footer/Footer';
 import Tjeneste from '../../components/Tjeneste/Tjeneste';
 import './Tjenester.scss';
 import tjenesteBilde from '../../static/images/tjenester.jpg';
+import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 
 class Tjenester extends React.Component {
 
@@ -16,17 +18,11 @@ class Tjenester extends React.Component {
         }
     }
 
-    componentWillMount() {
-        Promise.all([
-            fetch('https://naits.no/wp-json/wp/v2/tjenester'),
-            fetch('https://naits.no/wp-json/acf/v3/options/sertifikasjoner'),
-            fetch('https://naits.no/wp-json/acf/v3/options/kontaktpunkt')
-        ])
-        .then(([res1, res2, res3]) => Promise.all([res1.json(), res2.json(), res3.json()]))
-        .then(([data1, data2, data3]) => this.setState({
-            tjenester: data1,
-            sertifikasjoner: data2.acf.sertifikasjon,
-            kontaktpunkt: data3.acf.kontaktpunkt
+componentWillMount() {
+    fetch('https://naits.no/wp-json/wp/v2/tjenester')
+        .then((res1) => res1.json())
+        .then((data1) => this.setState({
+            tjenester: data1
         }));
     }
 
@@ -39,7 +35,7 @@ class Tjenester extends React.Component {
                             rgba(30, 55, 153, 0.6),
                             rgba(30, 55, 153, 1)
                         ),
-                        url(${tjenesteBilde})
+                        url(${!this.state.tjenester.featured_media ? tjenesteBilde : this.state.tjenester.featured_media})
                     `
             }
         }
@@ -69,16 +65,8 @@ class Tjenester extends React.Component {
                         })}
                     </div>
                 </section>
-                <section className="container-fluid bg-primary pt-5">
-                    <div className="container">
-                        <div className="align-items-center d-flex row">
-                            {/* THIS IS FOR THE CERTIFICATIONS */}
-                        </div>
-                    </div>
-                </section>
-                <Footer
-                    kontaktpunkter={this.state.kontaktpunkt}
-                />
+                <Sertifikasjoner />
+                <Footer />
             </React.Fragment>
         )
     }

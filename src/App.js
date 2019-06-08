@@ -6,7 +6,7 @@ import './scss/style.scss';
 class App extends React.Component {
   render() {
     return(
-      <Home />
+      <Tjenester />
     )
   }
 }
