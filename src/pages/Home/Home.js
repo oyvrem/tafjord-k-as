@@ -49,7 +49,7 @@ class Home extends React.Component {
         return(
             <React.Fragment>
                 <Navigation />
-                <header className="front-page container-fluid bg-primary text-light" style={styles.header}>
+                <header className="front-page container-fluid bg-primary text-light pb-5 pt-5" style={styles.header}>
                     <div className="container pt-5 pb-5">
                         <h1 className="h3">Kommunikasjon som funker</h1>
                         <p className="lead mb-4">{this.state.forside.forside_header_tekst}</p>
