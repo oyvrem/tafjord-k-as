@@ -19,10 +19,10 @@ class Ansatt extends React.Component {
                             {this.props.ansattAvdeling}
                         </p>
                         <p>
-                            <img src={phone} className="employee-card__body__text__icon responsive-icon" aria-hidden="true" /> <a href="#">{this.props.ansattTelefon}</a>
+                            <img src={phone} className="employee-card__body__text__icon responsive-icon" aria-hidden="true" /> <a href={`tel:${this.props.ansattTelefon}`} target="_blank">{this.props.ansattTelefon}</a>
                         </p>
                         <p>
-                            <img src={envelope} className="employee-card__body__text__icon" aria-hidden="true" /> <a href="#">{this.props.ansattEpost}</a>
+                            <img src={envelope} className="employee-card__body__text__icon" aria-hidden="true" /> <a href={`mailto:${this.props.ansattEpost}`} target="_blank">{this.props.ansattEpost}</a>
                         </p>
                     </div>
                 </div>

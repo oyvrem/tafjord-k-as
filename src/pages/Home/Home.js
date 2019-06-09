@@ -25,7 +25,8 @@ class Home extends React.Component {
         .then(([data1, data2]) => this.setState({
             forside: data1.acf,
             ansatte: data2
-        }));
+        }))
+        .catch(err => console.log(err));
     }
 
     render() {
