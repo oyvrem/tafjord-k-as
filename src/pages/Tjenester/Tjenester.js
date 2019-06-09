@@ -4,6 +4,7 @@ import Tjeneste from '../../components/Tjeneste/Tjeneste';
 import './Tjenester.scss';
 import tjenesteBilde from '../../static/images/tjenester.jpg';
 import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
+import { Link } from 'react-router-dom';
 
 class Tjenester extends React.Component {
 
@@ -43,7 +44,7 @@ componentWillMount() {
                     </h1>
                 </header>
                 <section className="container mt-4 mb-3">
-                    <a href="/">Hjem</a> / Tjenester
+                    <Link to="/">Hjem</Link> / Tjenester
                 </section>
                 <section className="container pb-3 pt-4">
                     <div className="row">

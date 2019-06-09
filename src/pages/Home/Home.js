@@ -4,7 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import Ansatt from '../../components/Ansatte/Ansatt';
 import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import headerFrontFallback from '../../static/images/header-front-fallback.jpg';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
 
@@ -47,7 +47,7 @@ class Home extends React.Component {
                         <h1 className="h3">Kommunikasjon som funker</h1>
                         <p className="lead mb-4">{this.state.forside.forside_header_tekst}</p>
                         <p>
-                            <NavLink to="/tjenester" className="btn btn-lg btn-light mb-3 mr-3">Se hva vi gjør</NavLink>
+                            <Link to="/tjenester" className="btn btn-lg btn-light mb-3 mr-3">Se hva vi gjør</Link>
                             <a href="#ansatte" className="btn btn-lg btn-outline-light mb-3">Prat med en av oss</a>
                         </p>
                     </div>      

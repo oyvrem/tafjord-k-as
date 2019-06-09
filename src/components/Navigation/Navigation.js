@@ -5,7 +5,7 @@ class Navigation extends React.Component {
     render() {
         return(
             <nav className="navbar navbar-expand navbar-light bg-light">
-                <NavLink to="/" className="navbar-brand">Tafjord K AS</NavLink>
+                <Link to="/" className="navbar-brand">Tafjord K AS</Link>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
