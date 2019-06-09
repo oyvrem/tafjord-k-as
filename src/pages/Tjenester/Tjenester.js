@@ -1,6 +1,4 @@
 import React from 'react';
-import Navigation from '../../components/Navigation/Nagivation';
-import Sertfifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import Footer from '../../components/Footer/Footer';
 import Tjeneste from '../../components/Tjeneste/Tjeneste';
 import './Tjenester.scss';
@@ -12,9 +10,7 @@ class Tjenester extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tjenester: [],
-            sertifikasjoner: [],
-            kontaktpunkt: []
+            tjenester: []
         }
     }
 
@@ -41,7 +37,6 @@ componentWillMount() {
         }
         return(
             <React.Fragment>
-                <Navigation />
                 <header className="align-items-center container-fluid d-flex justify-content-center pt-5 pb-5 bg-primary page-header" style={styles.header}>
                     <h1 className="text-light">
                         Tjenester
