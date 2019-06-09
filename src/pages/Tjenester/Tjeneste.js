@@ -52,7 +52,9 @@ class Tjeneste extends React.Component {
                         rgba(30, 55, 153, 0.6),
                         rgba(30, 55, 153, 1)
                     ),
-                    url(${pageHeaderFallback})
+                    url(
+                        ${!tjeneste.featured_media ? pageHeaderFallback : tjeneste.featured_media}
+                    )
                 `
             }
         }
