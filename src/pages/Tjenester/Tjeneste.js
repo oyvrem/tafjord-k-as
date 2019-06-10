@@ -82,7 +82,7 @@ class Tjeneste extends React.Component {
                                     <Ansatt
                                         ansattBilde={kontaktperson.acf.ansatt_bilde}
                                         ansattNavn={kontaktperson.title.rendered}
-                                        ansattAvdeling={kontaktperson.acf.ansatt_avdeling}
+                                        ansattAvdeling={kontaktperson.acf.ansatt_tittel}
                                         ansattTelefon={kontaktperson.acf.ansatt_telefon}
                                         ansattEpost={kontaktperson.acf.ansatt_epostadresse}
                                     />
