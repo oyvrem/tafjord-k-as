@@ -21,12 +21,12 @@ class Home extends React.Component {
             fetch('https://naits.no/wp-json/acf/v3/options/forsideinnstillinger'),
             fetch('https://naits.no/wp-json/wp/v2/ansatte')
         ])
-        .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
-        .then(([data1, data2]) => this.setState({
-            forside: data1.acf,
-            ansatte: data2
-        }))
-        .catch(err => console.log(err));
+            .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+            .then(([data1, data2]) => this.setState({
+                forside: data1.acf,
+                ansatte: data2
+            }))
+            .catch(err => console.log(err));
     }
 
     render() {

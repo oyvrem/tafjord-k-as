@@ -17,28 +17,25 @@ class Tjeneste extends React.Component {
     }
 
     componentWillMount() {
-        this.getTjenester();
-        this.getKontaktperson();
+        this.getData();
     }
 
-    getTjenester = () => {
+    getData = () => {
         let id = window.location.pathname.split("/").pop();
+        // `https://naits.no/wp-json/acf/v3/ansatte/${this.state.tjeneste.id}`
         fetch(`https://naits.no/wp-json/wp/v2/tjenester/${id}`)
             .then(res => res.json())
             .then(data => this.setState({
                 tjeneste: data
             }))
-            .catch(err => console.log(err));
-    }
-
-    getKontaktperson = () => {
-        fetch(`https://naits.no/wp-json/acf/v3/ansatte/`)
-            .then(res => res.json())
-            .then(data => this.setState({
-                kontaktperson: data,
-                isLoading: false
-            }))
-            .catch(err => console.log(err));
+            .then(_ => {
+                fetch(`https://naits.no/wp-json/wp/v2/ansatte/${this.state.tjeneste.acf.tjeneste_kontaktperson[0].ID}`)
+                    .then(res => res.json())
+                    .then(data => this.setState({
+                        kontaktperson: data,
+                        isLoading: false
+                    }))
+            })
     }
 
     render() {
@@ -74,7 +71,7 @@ class Tjeneste extends React.Component {
                                 <h1 className="h3">
                                     {tjeneste.title.rendered}
                                 </h1>
-                                <div dangerouslySetInnerHTML={{__html: tjeneste.content.rendered}}/>
+                                <div dangerouslySetInnerHTML={{ __html: tjeneste.content.rendered }} />
                             </div>
                             <div className="col-md-4 pb-3">
                                 <h3>
@@ -83,11 +80,11 @@ class Tjeneste extends React.Component {
                                 <hr />
                                 <div className="mb-3">
                                     <Ansatt
-                                        ansattBilde=""
-                                        ansattNavn="Heidi Klum"
-                                        ansattAvdeling="Salg"
-                                        ansattTelefon="99 88 77 66"
-                                        ansattEpost="hei@hallo.no"
+                                        ansattBilde={kontaktperson.acf.ansatt_bilde}
+                                        ansattNavn={kontaktperson.title.rendered}
+                                        ansattAvdeling={kontaktperson.acf.ansatt_avdeling}
+                                        ansattTelefon={kontaktperson.acf.ansatt_telefon}
+                                        ansattEpost={kontaktperson.acf.ansatt_epostadresse}
                                     />
                                 </div>
                             </div>
