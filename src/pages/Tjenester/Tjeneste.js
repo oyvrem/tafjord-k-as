@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../layout/layout';
 import Ansatt from '../../components/Ansatte/Ansatt';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import Loading from '../../components/Loading/Loading';
 import pageHeaderFallback from '../../static/images/page-header-fallback.jpg';
 import { Link } from 'react-router-dom';
 
@@ -55,42 +56,45 @@ class Tjeneste extends React.Component {
             }
         }
         return (
-            <Layout>
-                {this.state.isLoading
-                ? ""
-                :
-                <div>
-                    <PageHeader headerStyle={styles.header} />
-                    <section className="[ container mt-4 mb-3] ">
-                        <Link to="/">Hjem</Link> / <Link to="/tjenester">Tjenester</Link> / {tjeneste.title.rendered}
-                    </section>
-                    <section className="[ container page-content pb-3 pt-3 ]">
-                        <div className="[ row ]">
-                            <div className="[ col-md-8 pb-3 pt-2 ]">
-                                <h1 className="[ h3 ]">
-                                    {tjeneste.title.rendered}
-                                </h1>
-                                <div dangerouslySetInnerHTML={{ __html: tjeneste.content.rendered }} />
-                            </div>
-                            <div className="[ col-md-4 pb-3 ]">
-                                <h3>
-                                    Prat med en av oss
-                                </h3>
-                                <hr />
-                                <div className="[ mb-3 ]">
-                                    <Ansatt
-                                        ansattBilde={kontaktperson.acf.ansatt_bilde}
-                                        ansattNavn={kontaktperson.title.rendered}
-                                        ansattAvdeling={kontaktperson.acf.ansatt_tittel}
-                                        ansattTelefon={kontaktperson.acf.ansatt_telefon}
-                                        ansattEpost={kontaktperson.acf.ansatt_epostadresse}
-                                    />
+            <React.Fragment>
+                {
+                    this.state.isLoading
+                    ?
+                        <Loading />
+                    :
+                        <Layout>
+                            <PageHeader headerStyle={styles.header} />
+                            <section className="[ container mt-4 mb-3] ">
+                                <Link to="/">Hjem</Link> / <Link to="/tjenester">Tjenester</Link> / {tjeneste.title.rendered}
+                            </section>
+                            <section className="[ container page-content pb-3 pt-3 ]">
+                                <div className="[ row ]">
+                                    <div className="[ col-md-8 pb-3 pt-2 ]">
+                                        <h1 className="[ h3 ]">
+                                            {tjeneste.title.rendered}
+                                        </h1>
+                                        <div dangerouslySetInnerHTML={{ __html: tjeneste.content.rendered }} />
+                                    </div>
+                                    <div className="[ col-md-4 pb-3 ]">
+                                        <h3>
+                                            Prat med en av oss
+                                        </h3>
+                                        <hr />
+                                        <div className="[ mb-3 ]">
+                                            <Ansatt
+                                                ansattBilde={kontaktperson.acf.ansatt_bilde}
+                                                ansattNavn={kontaktperson.title.rendered}
+                                                ansattAvdeling={kontaktperson.acf.ansatt_tittel}
+                                                ansattTelefon={kontaktperson.acf.ansatt_telefon}
+                                                ansattEpost={kontaktperson.acf.ansatt_epostadresse}
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>}
-            </Layout>
+                            </section>
+                        </Layout>
+                }
+            </React.Fragment>
         )
     }
 }
