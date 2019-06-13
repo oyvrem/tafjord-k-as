@@ -26,7 +26,7 @@ class Sertifikasjoner extends React.Component {
                         {this.state.sertifikasjoner.map((sertifikasjon, i) => {
                             return (
                                 <div key={i} className="[ col-md-2 mx-auto mb-5 ]">
-                                    <img className="[ img-fluid ]" src={sertifikasjon.sertifikasjon_bilde} aria-hidden="true" />
+                                    <img className="[ img-fluid ]" src={sertifikasjon.sertifikasjon_bilde} aria-hidden="true" alt={`Ikon for sertifikasjon nummer ${i+1}.`} />
                                 </div>
                             )
                         })}

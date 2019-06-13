@@ -7,7 +7,7 @@ const Ansatt = props => {
     return (
         <div className="employee-card">
             <div className="employee-card__image">
-                <img src={props.ansattBilde} aria-hidden="true" alt={`Et bilde av ${props.ansattBilde}`} />
+                <img src={props.ansattBilde} aria-hidden="true" alt={`Et bilde av ${props.ansattNavn}`} />
             </div>
             <div className="employee-card__body">
                 <h3 className="employee-card__body__title card-title [ h4 mb-3 ]">
