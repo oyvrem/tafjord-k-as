@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './components/Navigation/Navigation';
 import Home from './pages/Home/Home';
+import Om from './pages/Om/Om';
 import Tjenester from './pages/Tjenester/Tjenester';
 import Tjeneste from './pages/Tjenester/Tjeneste';
 import './scss/style.scss';
@@ -12,6 +13,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Navigation />
         <Route exact path="/" component={Home} />
+        <Route path="/om" component={Om} />
         <Route exact path="/tjenester" component={Tjenester} />
         <Route path="/tjenester/tjeneste/:id" component={Tjeneste} />
       </BrowserRouter>
