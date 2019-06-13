@@ -1,7 +1,5 @@
-@import '~bootstrap/scss/bootstrap';
-
 .employee-card {
-    @extend .card;
+    @extend .card !optional;
     &__image {
         position: relative;
         display: inline-block;
@@ -13,9 +11,9 @@
         }
     }
     &__body {
-        @extend .card-body;
+        @extend .card-body !optional;
         &__text {
-            @extend .lead;
+            @extend .lead !optional;
             &__icon {
                 height: 1em;
                 width: 1em;

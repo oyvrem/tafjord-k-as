@@ -4,10 +4,39 @@
 
 @import "~bootstrap/scss/bootstrap";
 
+/* layout stylesheets */
+
+@import "../layout/layout.scss";
+
+/* components stylesheets */
+
+/* Ansatte stil */
+
+@import "../components/Ansatte/Ansatt.scss";
+
+@import "../components/Footer/Footer.scss";
+
+@import "../components/Kontaktpunkt/Kontaktpunkt.scss";
+
+@import "../components/Navigation/Navigation.scss";
+
+@import "../components/Sertifikasjoner/Sertifikasjoner.scss";
+
+@import "../components/Tjeneste/Tjeneste.scss";
+
+/* component "pages" stylesheet */
+
+@import "../pages/Home/Home.scss";
+
+@import "../pages/Om/Om.scss";
+
+@import "../pages/Tjenester/Tjenester.scss";
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: "Montserrat", sans-serif;
+    color: map-get($theme-colors, "dark" );
 }
