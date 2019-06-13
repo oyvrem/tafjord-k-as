@@ -1,9 +1,8 @@
 import React from 'react';
-import Footer from '../../components/Footer/Footer';
+import Layout from '../../layout/layout';
 import Tjeneste from '../../components/Tjeneste/Tjeneste';
 import './Tjenester.scss';
 import tjenesteBilde from '../../static/images/tjenester.jpg';
-import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import { Link } from 'react-router-dom';
 
 class Tjenester extends React.Component {
@@ -37,7 +36,7 @@ componentWillMount() {
             }
         }
         return(
-            <React.Fragment>
+            <Layout>
                 <header className="align-items-center container-fluid d-flex justify-content-center pt-5 pb-5 bg-primary page-header" style={styles.header}>
                     <h1 className="text-light">
                         Tjenester
@@ -61,9 +60,7 @@ componentWillMount() {
                         })}
                     </div>
                 </section>
-                <Sertifikasjoner />
-                <Footer />
-            </React.Fragment>
+            </Layout>
         )
     }
 }

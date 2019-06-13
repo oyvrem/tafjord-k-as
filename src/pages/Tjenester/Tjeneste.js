@@ -1,7 +1,6 @@
 import React from 'react';
+import Layout from '../../layout/layout';
 import Ansatt from '../../components/Ansatte/Ansatt';
-import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
-import Footer from '../../components/Footer/Footer';
 import pageHeaderFallback from '../../static/images/page-header-fallback.jpg';
 import { Link } from 'react-router-dom';
 
@@ -56,7 +55,7 @@ class Tjeneste extends React.Component {
             }
         }
         return (
-            <React.Fragment>
+            <Layout>
                 {this.state.isLoading
                 ? ""
                 :
@@ -90,11 +89,8 @@ class Tjeneste extends React.Component {
                             </div>
                         </div>
                     </section>
-                    <Sertifikasjoner />
-                    <Footer />
                 </div>}
-                
-            </React.Fragment>
+            </Layout>
         )
     }
 }

@@ -1,8 +1,7 @@
 import React from 'react';
 import './Home.scss';
-import Footer from '../../components/Footer/Footer';
+import Layout from '../../layout/layout';
 import Ansatt from '../../components/Ansatte/Ansatt';
-import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import headerFrontFallback from '../../static/images/header-front-fallback.jpg';
 import { Link } from 'react-router-dom';
 
@@ -42,7 +41,7 @@ class Home extends React.Component {
             }
         }
         return(
-            <React.Fragment>
+            <Layout>
                 <header className="front-page container-fluid bg-primary text-light pb-5 pt-5" style={styles.header}>
                     <div className="container pt-5 pb-5">
                         <h1 className="h3">Kommunikasjon som funker</h1>
@@ -73,9 +72,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-                <Sertifikasjoner />
-                <Footer />
-            </React.Fragment>
+            </Layout>
         )
     }
 }
