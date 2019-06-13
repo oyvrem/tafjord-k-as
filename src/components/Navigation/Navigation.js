@@ -6,20 +6,18 @@ import logo from '../../static/logo/logo_horizontal-color.svg';
 class Navigation extends React.Component {
     render() {
         return(
-            <nav className="navbar navbar-expand navbar-light bg-light">
-                <Link to="/" className="navbar-brand">
+            <nav className="navigation">
+                <Link to="/" className="navigation__logo">
                     <img src={logo} />
                 </Link>
-                <div className="collapse navbar-collapse">
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                            <NavLink to="/tjenester" className="nav-link">Tjenester</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to="/om" className="nav-link">Om</NavLink>
-                        </li>
-                    </ul>
-                </div>
+                <ul className="navigation__navbar">
+                    <li className="navigation__navbar__item">
+                        <NavLink to="/tjenester" className="navigation__navbar__item__link">Tjenester</NavLink>
+                    </li>
+                    <li className="navigation__navbar__item nav-item">
+                        <NavLink to="/om" className="navigation__navbar__item__link">Om</NavLink>
+                    </li>
+                </ul>
             </nav>
         )
     }

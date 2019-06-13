@@ -1,3 +1,23 @@
+.navigation {
+    @extend .navbar !optional;
+    @extend .navbar-expand !optional;
+    @extend .navbar-light !optional;
+    @extend .bg-light !optional;
+    &__logo {
+        @extend .navbar-brand !optional;
+    }
+    &__navbar {
+        @extend .navbar-nav !optional;
+        @extend .ml-auto !optional;
+        &__item {
+            @extend .nav-item !optional;
+            &__link {
+                @extend .nav-link !optional;
+            }
+        }
+    }
+}
+
 .navbar-brand {
     img {
         height: 40px;
