@@ -9,7 +9,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
-    return(
+    return (
       <BrowserRouter>
         <Navigation />
         <Route exact path="/" component={Home} />

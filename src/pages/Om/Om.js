@@ -17,7 +17,7 @@ class Om extends React.Component {
                     `
             }
         }
-        return(
+        return (
             <Layout>
                 <PageHeader headerStyle={styles.header}>
                     <h1 className="[ text-light ]">Om</h1>

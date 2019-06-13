@@ -4,7 +4,7 @@ import Footer from '../components/Footer/Footer';
 
 class Layout extends React.Component {
     render() {
-        return(
+        return (
             <React.Fragment>
                 {this.props.children}
                 <Sertifikasjoner />

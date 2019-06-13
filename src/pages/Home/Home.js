@@ -42,7 +42,7 @@ class Home extends React.Component {
                 `
             }
         }
-        return(
+        return (
             <React.Fragment>
                 {
                     this.state.isLoading
@@ -65,7 +65,7 @@ class Home extends React.Component {
                                     <h2 className="[ text-center mb-4 ]">Prat med en av oss</h2>
                                     <div className="[ row ]">
                                         {this.state.ansatte.map(ansatt => {
-                                            return(
+                                            return (
                                                 <div key={ansatt.id} className="[ col-md-4 mb-5 ]">
                                                     <Ansatt
                                                         ansattBilde={ansatt.acf.ansatt_bilde}

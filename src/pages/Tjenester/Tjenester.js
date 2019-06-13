@@ -38,7 +38,7 @@ componentWillMount() {
                     `
             }
         }
-        return(
+        return (
             <React.Fragment>
                 {
                     this.state.isLoading
@@ -57,7 +57,7 @@ componentWillMount() {
                             <section className="[ container pb-3 pt-4 ]">
                                 <div className="[ row ]">
                                     {this.state.tjenester.map(tjeneste => {
-                                        return(
+                                        return (
                                             <div key={tjeneste.id} className="[ col-md-6 mb-4 ]">
                                                 <Tjeneste
                                                     tjenesteTittel={tjeneste.title.rendered}

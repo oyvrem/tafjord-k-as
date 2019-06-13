@@ -1,10 +1,9 @@
 import React from 'react';
 
 const Loading = () => {
-    return(
+    return (
         <div className="[ d-flex align-items-center justify-content-center ]" style={{
-            height: '100vh',
-            width: '100%',
+            minHeight: '100vh',
             paddingBottom: '150px'
         }}>
             <div className="spinner-border text-primary">
