@@ -60,24 +60,24 @@ class Tjeneste extends React.Component {
                 ? ""
                 :
                 <div>
-                    <header className="align-items-center container-fluid d-flex justify-content-center page-header" style={styles.header}></header>
-                    <section className="container mt-4 mb-3">
+                    <header className="[ align-items-center container-fluid d-flex justify-content-center ]" style={styles.header}></header>
+                    <section className="[ container mt-4 mb-3] ">
                         <Link to="/">Hjem</Link> / <Link to="/tjenester">Tjenester</Link> / {tjeneste.title.rendered}
                     </section>
-                    <section className="container page-content pb-3 pt-3">
-                        <div className="row">
-                            <div className="col-md-8 pb-3 pt-2">
-                                <h1 className="h3">
+                    <section className="[ container page-content pb-3 pt-3 ]">
+                        <div className="[ row ]">
+                            <div className="[ col-md-8 pb-3 pt-2 ]">
+                                <h1 className="[ h3 ]">
                                     {tjeneste.title.rendered}
                                 </h1>
                                 <div dangerouslySetInnerHTML={{ __html: tjeneste.content.rendered }} />
                             </div>
-                            <div className="col-md-4 pb-3">
+                            <div className="[ col-md-4 pb-3 ]">
                                 <h3>
                                     Prat med en av oss
                                 </h3>
                                 <hr />
-                                <div className="mb-3">
+                                <div className="[ mb-3 ]">
                                     <Ansatt
                                         ansattBilde={kontaktperson.acf.ansatt_bilde}
                                         ansattNavn={kontaktperson.title.rendered}

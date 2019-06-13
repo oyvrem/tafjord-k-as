@@ -1,5 +1,4 @@
 import React from 'react';
-import './Home.scss';
 import Layout from '../../layout/layout';
 import Ansatt from '../../components/Ansatte/Ansatt';
 import headerFrontFallback from '../../static/images/header-front-fallback.jpg';

@@ -18,15 +18,15 @@ class Om extends React.Component {
         }
         return(
             <Layout>
-                <header className="align-items-center container-fluid d-flex justify-content-center pt-5 pb-5 bg-primary page-header" style={styles.header}>
-                    <h1 className="text-light">Om</h1>
+                <header className="[ align-items-center container-fluid d-flex justify-content-center pt-5 pb-5 bg-primary ]" style={styles.header}>
+                    <h1 className="[ text-light ]">Om</h1>
                 </header>
-                <section className="container mt-4 mb-3">
+                <section className="[ container mt-4 mb-3 ]">
                     <Link to="/">Hjem</Link> / Om
                 </section>
-                <section className="container pb-4 pt-4">
-                    <div className="row">
-                        <div className="col-md-8">
+                <section className="[ container pb-4 pt-4 ]">
+                    <div className="[ row ]">
+                        <div className="[ col-md-8 ]">
                             <p>
                                 Tafjord K, tidligere Tafjord Kommunikasjon, har over 35 års erfaring med leveranser av kommunikasjonsutstyr til bedriftskunder over hele landet. Tafjord Kommunikasjon ble stiftet i 1983 og var tidlig ute med introduksjon av mobiltelefonen og leveranser av kommunikasjonsløsninger basert på mobilteknologi.
                             </p>
