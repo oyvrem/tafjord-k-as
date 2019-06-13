@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 class Tjeneste extends React.Component {
     render() {
         return(
-            <div className="tjeneste">
-                <h3 className="tjeneste__tittel">
+            <div>
+                <h3>
                     {this.props.tjenesteTittel}
                 </h3>
-                <p className="tjeneste__utdrag">
+                <p>
                     {this.props.tjenesteUtdrag}
                 </p>
-                <p className="tjeneste__link">
+                <p>
                     <Link to={`/tjenester/tjeneste/${this.props.tjenesteLink}`} className="btn btn-primary text-light">Les mer</Link>
                 </p>
             </div>
