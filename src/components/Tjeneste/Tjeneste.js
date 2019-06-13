@@ -12,7 +12,7 @@ class Tjeneste extends React.Component {
                     {this.props.tjenesteUtdrag}
                 </p>
                 <p>
-                    <Link to={`/tjenester/tjeneste/${this.props.tjenesteLink}`} className="btn btn-primary text-light">Les mer</Link>
+                    <Link to={`/tjenester/tjeneste/${this.props.tjenesteLink}`} className="[ btn btn-primary text-light ]">Les mer</Link>
                 </p>
             </div>
         )

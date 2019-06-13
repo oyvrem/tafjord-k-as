@@ -11,7 +11,7 @@ class Ansatt extends React.Component {
                     <img src={this.props.ansattBilde} aria-hidden="true" />
                 </div>
                 <div className="employee-card__body">
-                    <h3 className="employee-card__body__title card-title h4 mb-3">
+                    <h3 className="employee-card__body__title card-title [ h4 mb-3 ]">
                         {this.props.ansattNavn}
                     </h3>
                     <div className="employee-card__body__text">
