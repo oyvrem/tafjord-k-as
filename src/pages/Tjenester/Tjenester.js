@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../layout/layout';
 import Tjeneste from '../../components/Tjeneste/Tjeneste';
+import PageHeader from '../../components/PageHeader/PageHeader';
 import tjenesteBilde from '../../static/images/tjenester.jpg';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ componentWillMount() {
         .then((data1) => this.setState({
             tjenester: data1
         }));
-    }
+}
 
     
     render() {
@@ -36,11 +37,11 @@ componentWillMount() {
         }
         return(
             <Layout>
-                <header className="[ align-items-center container-fluid d-flex justify-content-center pt-5 pb-5 bg-primary ]" style={styles.header}>
+                <PageHeader headerStyle={styles.header}>
                     <h1 className="[ text-light ]">
                         Tjenester
                     </h1>
-                </header>
+                </PageHeader>
                 <section className="[ container mt-4 mb-3 ]">
                     <Link to="/">Hjem</Link> / Tjenester
                 </section>

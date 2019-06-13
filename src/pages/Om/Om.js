@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../layout/layout';
+import PageHeader from '../../components/PageHeader/PageHeader';
 import omBilde from '../../static/images/om.jpg';
 import { Link } from 'react-router-dom';
 
@@ -18,9 +19,9 @@ class Om extends React.Component {
         }
         return(
             <Layout>
-                <header className="[ align-items-center container-fluid d-flex justify-content-center pt-5 pb-5 bg-primary ]" style={styles.header}>
+                <PageHeader headerStyle={styles.header}>
                     <h1 className="[ text-light ]">Om</h1>
-                </header>
+                </PageHeader>
                 <section className="[ container mt-4 mb-3 ]">
                     <Link to="/">Hjem</Link> / Om
                 </section>

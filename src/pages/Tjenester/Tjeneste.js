@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../layout/layout';
 import Ansatt from '../../components/Ansatte/Ansatt';
+import PageHeader from '../../components/PageHeader/PageHeader';
 import pageHeaderFallback from '../../static/images/page-header-fallback.jpg';
 import { Link } from 'react-router-dom';
 
@@ -21,7 +22,6 @@ class Tjeneste extends React.Component {
 
     getData = () => {
         let id = window.location.pathname.split("/").pop();
-        // `https://naits.no/wp-json/acf/v3/ansatte/${this.state.tjeneste.id}`
         fetch(`https://naits.no/wp-json/wp/v2/tjenester/${id}`)
             .then(res => res.json())
             .then(data => this.setState({
@@ -60,7 +60,7 @@ class Tjeneste extends React.Component {
                 ? ""
                 :
                 <div>
-                    <header className="[ align-items-center container-fluid d-flex justify-content-center ]" style={styles.header}></header>
+                    <PageHeader headerStyle={styles.header} />
                     <section className="[ container mt-4 mb-3] ">
                         <Link to="/">Hjem</Link> / <Link to="/tjenester">Tjenester</Link> / {tjeneste.title.rendered}
                     </section>
