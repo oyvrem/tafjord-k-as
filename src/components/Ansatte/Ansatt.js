@@ -14,12 +14,12 @@ class Ansatt extends React.Component {
                     <h3 className="employee-card__body__title card-title h4 mb-3">
                         {this.props.ansattNavn}
                     </h3>
-                    <div className="employee-card__body__text lead">
+                    <div className="employee-card__body__text">
                         <p>
                             {this.props.ansattAvdeling}
                         </p>
                         <p>
-                            <img src={phone} className="employee-card__body__text__icon responsive-icon" aria-hidden="true" /> <a href={`tel:${this.props.ansattTelefon}`} target="_blank">{this.props.ansattTelefon}</a>
+                            <img src={phone} className="employee-card__body__text__icon" aria-hidden="true" /> <a href={`tel:${this.props.ansattTelefon}`} target="_blank">{this.props.ansattTelefon}</a>
                         </p>
                         <p>
                             <img src={envelope} className="employee-card__body__text__icon" aria-hidden="true" /> <a href={`mailto:${this.props.ansattEpost}`} target="_blank">{this.props.ansattEpost}</a>

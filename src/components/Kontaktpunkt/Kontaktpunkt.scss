@@ -1,8 +1,17 @@
-.contact-information {
-    &__icon {
+.kontaktpunkt {
+    @extend .text-primary !optional;
+    &__ikon {
         img {
             height: 50px;
             width: auto;
         }
+    }
+    &__tittel {
+        @extend .text-center !optional;
+        @extend .text-uppercase !optional;
+        @extend .font-weight-bold !optional;
+    }
+    &__tekst {
+        @extend .text-center !optional;
     }
 }

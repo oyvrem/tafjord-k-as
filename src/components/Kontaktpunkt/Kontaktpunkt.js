@@ -4,14 +4,14 @@ import './Kontaktpunkt.scss';
 class Kontaktpunkt extends React.Component {
     render() {
         return(
-            <a href={this.props.kontaktpunktLink} className="text-primary">
-                <div className="align-items-center contact-information__icon d-flex justify-content-center mb-3">
+            <a href={this.props.kontaktpunktLink} className="kontaktpunkt">
+                <div className="kontaktpunkt__ikon [ align-items-center d-flex justify-content-center mb-3 ]">
                     <img src={this.props.kontaktpunktIkon} aria-hidden="true" />
                 </div>
-                <h4 className="text-center text-uppercase font-weight-bold">
+                <h4 className="kontaktpunkt__tittel">
                     {this.props.kontaktpunktTittel}
                 </h4>
-                <p className="text-center">
+                <p className="kontaktpunkt__tekst">
                     {this.props.kontaktpunktTekst}
                 </p>
             </a>
