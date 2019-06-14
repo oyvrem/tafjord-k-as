@@ -2,6 +2,7 @@
   "name": "tafjord-k-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://oyvrem.com/client/tafkom/showcase",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "node-sass": "^4.12.0",
