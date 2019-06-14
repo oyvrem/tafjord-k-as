@@ -7,7 +7,7 @@ const Loading = () => {
             paddingBottom: '150px'
         }}>
             <div className="spinner-border text-primary mb-3" aria-hidden="true"></div>
-            <strong>Loading...</strong>
+            <strong>Laster...</strong>
         </div>
     )
 }
