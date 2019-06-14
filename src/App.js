@@ -10,7 +10,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter basename="/client/tafkom/showcase">
+      <BrowserRouter basename="/client/tafkom">
         <Navigation />
         <Route exact path="/" component={Home} />
         <Route path="/om" component={Om} />
