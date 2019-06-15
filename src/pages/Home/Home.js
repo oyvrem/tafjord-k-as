@@ -13,7 +13,8 @@ class Home extends React.Component {
             forside: [],
             ansatte: [],
             isLoading: true
-        }
+        };
+        this.ansatteSection = React.createRef();
     }
 
     componentWillMount() {
@@ -28,6 +29,13 @@ class Home extends React.Component {
                 isLoading: false
             }))
             .catch(err => console.log(err));
+    }
+
+    goToAnsatteSection = () => {
+        window.scrollTo(
+            0,
+            this.ansatteSection.current.offsetTop
+        );
     }
 
     render() {
@@ -56,11 +64,11 @@ class Home extends React.Component {
                                     <p className="[ lead mb-4 ]">{this.state.forside.forside_header_tekst}</p>
                                     <p>
                                         <Link to="/tjenester" className="[ btn btn-lg btn-light mb-3 mr-3 ]">Se hva vi gjør</Link>
-                                        <a href="#ansatte" className="[ btn btn-lg btn-outline-light mb-3 ]">Prat med en av oss</a>
+                                        <button onClick={this.goToAnsatteSection} className="[ btn btn-lg btn-outline-light mb-3 ]">Prat med en av oss</button>
                                     </p>
-                                </div>      
+                                </div>
                             </header>
-                            <section id="ansatte" className="[ container-fluid pt-5 pb-5 ]">
+                            <section ref={this.ansatteSection} className="[ container-fluid pt-5 pb-5 ]">
                                 <div className="[ container ]">
                                     <h2 className="[ text-center mb-4 ]">Prat med en av oss</h2>
                                     <div className="[ row ]">
