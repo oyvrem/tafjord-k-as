@@ -11,10 +11,10 @@ const Navigation = () => {
             </Link>
             <ul className="navigation__navbar">
                 <li className="navigation__navbar__item">
-                    <NavLink to="/tjenester" className="navigation__navbar__item__link">Tjenester</NavLink>
+                    <NavLink to="/tjenester" className="navigation__navbar__item__link" activeClassName="active" >Tjenester</NavLink>
                 </li>
                 <li className="navigation__navbar__item nav-item">
-                    <NavLink to="/om" className="navigation__navbar__item__link">Om</NavLink>
+                    <NavLink to="/om" className="navigation__navbar__item__link" activeClassName="active">Om</NavLink>
                 </li>
             </ul>
         </nav>
