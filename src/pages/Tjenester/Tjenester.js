@@ -3,6 +3,7 @@ import Layout from '../../layout/layout';
 import Tjeneste from '../../components/Tjeneste/Tjeneste';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Loading from '../../components/Loading/Loading';
+import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import tjenesteBilde from '../../static/images/tjenester.jpg';
 import { Link } from 'react-router-dom';
 
@@ -69,6 +70,7 @@ componentWillMount() {
                                     })}
                                 </div>
                             </section>
+                            <Sertifikasjoner loadSertifikasjoner={false} />
                         </Layout>
                 }
             </React.Fragment>

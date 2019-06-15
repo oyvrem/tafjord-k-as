@@ -7,7 +7,6 @@ class Layout extends React.Component {
         return (
             <React.Fragment>
                 {this.props.children}
-                <Sertifikasjoner />
                 <Footer />
             </React.Fragment>
         )

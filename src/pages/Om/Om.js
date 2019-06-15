@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../layout/layout';
 import PageHeader from '../../components/PageHeader/PageHeader';
+import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import omBilde from '../../static/images/om.jpg';
 import { Link } from 'react-router-dom';
 
@@ -40,6 +41,7 @@ class Om extends React.Component {
                         </div>
                     </div>
                 </section>
+                <Sertifikasjoner loadSertifikasjoner={false} />
             </Layout>
         )
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../layout/layout';
 import Ansatt from '../../components/Ansatte/Ansatt';
 import Loading from '../../components/Loading/Loading';
+import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import headerFrontFallback from '../../static/images/header-front-fallback.jpg';
 import { Link } from 'react-router-dom';
 
@@ -88,6 +89,7 @@ class Home extends React.Component {
                                     </div>
                                 </div>
                             </section>
+                            <Sertifikasjoner loadSertifikasjoner={true} />
                         </Layout>
                 }
             </React.Fragment>

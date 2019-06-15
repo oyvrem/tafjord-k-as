@@ -3,6 +3,7 @@ import Layout from '../../layout/layout';
 import Ansatt from '../../components/Ansatte/Ansatt';
 import PageHeader from '../../components/PageHeader/PageHeader';
 import Loading from '../../components/Loading/Loading';
+import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import pageHeaderFallback from '../../static/images/page-header-fallback.jpg';
 import { Link } from 'react-router-dom';
 
@@ -91,6 +92,7 @@ class Tjeneste extends React.Component {
                                     </div>
                                 </div>
                             </section>
+                            <Sertifikasjoner loadSertifikasjoner={false} />
                         </Layout>
                 }
             </React.Fragment>
