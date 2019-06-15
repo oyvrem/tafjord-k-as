@@ -5,18 +5,18 @@ import Om from './pages/Om/Om';
 import Tjenester from './pages/Tjenester/Tjenester';
 import Tjeneste from './pages/Tjenester/Tjeneste';
 import './scss/style.scss';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter basename="/client/tafkom">
+      <HashRouter>
         <Navigation />
         <Route exact path="/" component={Home} />
         <Route path="/om" component={Om} />
         <Route exact path="/tjenester" component={Tjenester} />
         <Route path="/tjenester/tjeneste/:id" component={Tjeneste} />
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }

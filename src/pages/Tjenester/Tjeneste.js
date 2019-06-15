@@ -22,13 +22,14 @@ class Tjeneste extends React.Component {
     }
 
     getData = () => {
-        let id = window.location.pathname.split("/").pop();
+        // let id = window.location.pathname.split("/").pop();
+        const id = this.props.match.params.id;
+        console.log(id);
         fetch(`https://naits.no/wp-json/wp/v2/tjenester/${id}`)
             .then(res => res.json())
             .then(data => this.setState({
                 tjeneste: data
-            }))
-            .then(_ => {
+            })).then(_ => {
                 fetch(`https://naits.no/wp-json/wp/v2/ansatte/${this.state.tjeneste.acf.tjeneste_kontaktperson[0].ID}`)
                     .then(res => res.json())
                     .then(data => this.setState({
@@ -40,8 +41,6 @@ class Tjeneste extends React.Component {
 
     render() {
         const { tjeneste, kontaktperson } = this.state;
-        console.log(tjeneste);
-        console.log(kontaktperson);
         let styles = {
             header: {
                 backgroundImage: `
