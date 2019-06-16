@@ -32,8 +32,8 @@ componentWillMount() {
             header: {
                 backgroundImage: `
                         linear-gradient(
-                            rgba(30, 55, 153, 0.6),
-                            rgba(30, 55, 153, 1)
+                            rgba(52, 73, 159, 0.6),
+                            rgba(52, 73, 159, 1)
                         ),
                         url(${!this.state.tjenester.featured_media ? tjenesteBilde : this.state.tjenester.featured_media})
                     `

@@ -23,7 +23,6 @@ class Tjeneste extends React.Component {
     }
 
     getData = () => {
-        // let id = window.location.pathname.split("/").pop();
         const id = this.props.match.params.id;
         console.log(id);
         fetch(`https://naits.no/wp-json/wp/v2/tjenester/${id}`)
@@ -46,8 +45,8 @@ class Tjeneste extends React.Component {
             header: {
                 backgroundImage: `
                     linear-gradient(
-                        rgba(30, 55, 153, 0.6),
-                        rgba(30, 55, 153, 1)
+                        rgba(52, 73, 159, 0.6),
+                        rgba(52, 73, 159, 1)
                     ),
                     url(
                         ${!tjeneste.featured_media ? pageHeaderFallback : tjeneste.featured_media}
