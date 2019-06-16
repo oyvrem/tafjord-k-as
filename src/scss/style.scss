@@ -20,3 +20,8 @@ body {
     font-family: "Montserrat", sans-serif;
     color: map-get($theme-colors, "dark");
 }
+
+.btn,
+.card {
+    border-radius: 0;
+}
