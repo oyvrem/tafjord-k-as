@@ -7,6 +7,8 @@ import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import pageHeaderFallback from '../../static/images/page-header-fallback.jpg';
 import { Link } from 'react-router-dom';
 
+import SEO from '../../components/SEO/SEO';
+
 class Tjeneste extends React.Component {
 
     constructor(props) {
@@ -24,7 +26,6 @@ class Tjeneste extends React.Component {
 
     getData = () => {
         const id = this.props.match.params.id;
-        console.log(id);
         fetch(`https://naits.no/wp-json/wp/v2/tjenester/${id}`)
             .then(res => res.json())
             .then(data => this.setState({
@@ -62,6 +63,11 @@ class Tjeneste extends React.Component {
                         <Loading />
                     :
                         <Layout>
+                            <SEO
+                                title={tjeneste.title.rendered}
+                                description={/* this needs to be updated with a description field specifically made for SEO */ tjeneste.content.rendered}
+                                imgUrl={!tjeneste.featured_media ? pageHeaderFallback : tjeneste.featured_media}
+                            />
                             <PageHeader headerStyle={styles.header} />
                             <section className="[ container mt-4 mb-3] ">
                                 <Link to="/">Hjem</Link> / <Link to="/tjenester">Tjenester</Link> / {tjeneste.title.rendered}

@@ -61,7 +61,7 @@ class Home extends React.Component {
                     :
                         <Layout>
                             <SEO
-                                title="Tafjord Kommunikasjon"
+                                title="Hjem"
                                 description={this.state.forside.forside_header_tekst}
                                 imgUrl={this.state.forside.forside_header_bilde}
                             />

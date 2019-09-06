@@ -5,6 +5,8 @@ import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import omBilde from '../../static/images/om.jpg';
 import { Link } from 'react-router-dom';
 
+import SEO from '../../components/SEO/SEO';
+
 class Om extends React.Component {
     render() {
         let styles = {
@@ -20,6 +22,11 @@ class Om extends React.Component {
         }
         return (
             <Layout>
+                <SEO
+                    title="Om"
+                    description="Tafjord K, tidligere Tafjord Kommunikasjon, har over 35 års erfaring med leveranser av kommunikasjonsutstyr til bedriftskunder over hele landet. Tafjord Kommunikasjon ble stiftet i 1983 og var tidlig ute med introduksjon av mobiltelefonen og leveranser av kommunikasjonsløsninger basert på mobilteknologi."
+                    imgUrl={omBilde}
+                />
                 <PageHeader headerStyle={styles.header}>
                     <h1 className="[ text-light ]">Om</h1>
                 </PageHeader>

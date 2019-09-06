@@ -7,6 +7,8 @@ import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import tjenesteBilde from '../../static/images/tjenester.jpg';
 import { Link } from 'react-router-dom';
 
+import SEO from '../../components/SEO/SEO';
+
 class Tjenester extends React.Component {
 
     constructor(props) {
@@ -47,6 +49,11 @@ componentWillMount() {
                         <Loading />
                     :
                         <Layout>
+                            <SEO
+                                title="Tjenester"
+                                description="Vi tilbyr de fleste tjenestene innenfor telekommunikasjon"
+                                imgUrl={tjenesteBilde}
+                            />
                             <PageHeader headerStyle={styles.header}>
                                 <h1 className="[ text-light ]">
                                     Tjenester
