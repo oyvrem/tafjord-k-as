@@ -9,6 +9,8 @@ class FourOhFour extends React.Component {
             <>
                 <SEO
                     title="404"
+                    description="Side ikke funnet"
+                    imgUrl={headerFrontFallback}
                 />
                 <div className="bg-primary text-light" style={{
                     minHeight: '91vh',
