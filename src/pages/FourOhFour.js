@@ -23,7 +23,8 @@ class FourOhFour extends React.Component {
                                             rgba(52, 73, 159, 0.6),
                                             rgba(52, 73, 159, 1)
                                         ),
-                                        url(${headerFrontFallback})`
+                                        url(${headerFrontFallback})`,
+                    backgroundSize: 'cover'
                 }}>
                     <h1 className="display-1">404</h1>
                     <h2 className="lead mb-4">Side ikke funnet!</h2>
