@@ -15,7 +15,6 @@ class Home extends React.Component {
             ansatte: [],
             isLoading: true
         };
-        this.ansatteSection = React.createRef();
     }
 
     componentWillMount() {
@@ -35,7 +34,7 @@ class Home extends React.Component {
     goToAnsatteSection = () => {
         window.scrollTo(
             0,
-            this.ansatteSection.current.offsetTop
+            document.getElementById('ansatte')
         );
     }
 
@@ -69,7 +68,7 @@ class Home extends React.Component {
                                     </p>
                                 </div>
                             </header>
-                            <section ref={this.ansatteSection} className="[ container-fluid pt-5 pb-5 ]">
+                            <section id="ansatte" className="[ container-fluid pt-5 pb-5 ]">
                                 <div className="[ container ]">
                                     <h2 className="[ text-center mb-4 ]">Prat med en av oss</h2>
                                     <div className="[ row ]">
