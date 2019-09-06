@@ -25,8 +25,7 @@ class Tjeneste extends React.Component {
     }
 
     getData = () => {
-        const id = this.props.match.params.id;
-        fetch(`https://naits.no/wp-json/wp/v2/tjenester/${id}`)
+        fetch(`https://naits.no/wp-json/wp/v2/tjenester/${this.props.match.params.id}`)
             .then(res => res.json())
             .then(data => this.setState({
                 tjeneste: data
@@ -65,7 +64,7 @@ class Tjeneste extends React.Component {
                         <Layout>
                             <SEO
                                 title={tjeneste.title.rendered}
-                                description={/* this needs to be updated with a description field specifically made for SEO */ tjeneste.content.rendered}
+                                description={tjeneste.tjeneste_utdrag}
                                 imgUrl={!tjeneste.featured_media ? pageHeaderFallback : tjeneste.featured_media}
                             />
                             <PageHeader headerStyle={styles.header} />
