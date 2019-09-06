@@ -6,6 +6,8 @@ import Sertifikasjoner from '../../components/Sertifikasjoner/Sertifikasjoner';
 import headerFrontFallback from '../../static/images/header-front-fallback.jpg';
 import { Link } from 'react-router-dom';
 
+import SEO from './../../components/SEO/SEO';
+
 class Home extends React.Component {
 
     constructor(props) {
@@ -58,6 +60,11 @@ class Home extends React.Component {
                         <Loading />
                     :
                         <Layout>
+                            <SEO
+                                title="Tafjord Kommunikasjon"
+                                description={this.state.forside.forside_header_tekst}
+                                imgUrl={this.state.forside.forside_header_bilde}
+                            />
                             <header className="[ container-fluid bg-primary text-light pb-5 pt-5 ]" style={styles.header}>
                                 <div className="[ container pt-5 pb-5 ]">
                                     <h1 className="[ h3 ]">Kommunikasjon som funker</h1>
